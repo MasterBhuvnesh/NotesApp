@@ -14,7 +14,7 @@ app.use(cors({
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://bhuvneshverma29042005:Verma2902005$@notes.azp7xvl.mongodb.net/?retryWrites=true&w=majority&appName=notes");
+mongoose.connect("mongodb+srv://bhuvneshverma:Verma29042005@collage.lkkh7mp.mongodb.net/Quotes");
 
 
 // GET ALL USER DATA
