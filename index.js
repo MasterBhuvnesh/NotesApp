@@ -57,7 +57,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const UserModel = require("./models/type");
-const StyleModel = require("./models/Users");
+const ImgModel = require("./models/Image");
 const app = express();
 
 app.use(
@@ -82,8 +82,8 @@ app.get("/", (req, res) => {
     .then((users) => res.json(users))
     .catch((err) => res.json(err));
 });
-app.get("/styles", (req, res) => {
-  StyleModel.find({})
+app.get("/image", (req, res) => {
+  ImgModel.find({})
     .then((users) => res.json(users))
     .catch((err) => res.json(err));
 });
