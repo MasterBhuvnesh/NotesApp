@@ -82,6 +82,11 @@ app.get("/", (req, res) => {
     .then((users) => res.json(users))
     .catch((err) => res.json(err));
 });
+app.get("/styles", (req, res) => {
+  StyleModel.find({})
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
 
 // Delete a specific name from a document by type and name
 app.delete("/delete-name", (req, res) => {
