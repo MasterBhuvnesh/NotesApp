@@ -57,6 +57,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const UserModel = require("./models/type");
+const StyleModel = require("./models/Users");
 const app = express();
 
 app.use(
