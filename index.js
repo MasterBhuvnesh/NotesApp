@@ -121,7 +121,7 @@ app.put("/update-img", (req, res) => {
   }
   UserModel.updateOne(
     {name:"bg"},                  
-    { $set: { pic: pic } } 
+    { $set: { pics: pic } } 
   )
     .then(() => res.json({ message: "Image updated successfully" }))
     .catch((err) => res.status(400).json(err));
