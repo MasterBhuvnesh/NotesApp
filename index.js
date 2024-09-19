@@ -119,7 +119,7 @@ app.put("/update-img", (req, res) => {
   if (!pic) {
     return res.status(400).json({ message: "New pic URL is required" });
   }
-  UserModel.updateOne(
+  ImgModel.updateOne(
     {name:"bg"},                  
     { $set: { pics: pic } } 
   )
