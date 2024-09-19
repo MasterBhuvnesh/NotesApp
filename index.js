@@ -113,6 +113,21 @@ app.put("/update-status", (req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
+//  Update the background IMG
+app.put("/update-img", (req, res) => {
+  const { pic } = req.body;
+  if (!pic) {
+    return res.status(400).json({ message: "New pic URL is required" });
+  }
+  UserModel.updateOne(
+    {},                  
+    { $set: { pic: pic } } 
+  )
+    .then(() => res.json({ message: "Image updated successfully" }))
+    .catch((err) => res.status(400).json(err));
+});
+
+
 // Add a new name and status to a document (name and status required)
 app.post("/add-name", (req, res) => {
   const { type, name, status } = req.body;
